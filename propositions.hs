@@ -12,6 +12,7 @@ module Propositions where
     type Assignment = Assoc Char Bool
 
     --datatype for a proposition
+    --Const is equivalent to top/bottom
     data Prop = Const Bool
                 | Var Char
                 | Not Prop

@@ -2,17 +2,12 @@
 data types and functions for assigning values to expressions -}
 
 module Semantics where
-    --propositional variables type
-    type PropVar = Bool
+    import Propositions
 
-    --top and bottom
-    top :: PropVar
-    top = True
-    
-    bottom :: PropVar
-    bottom = False
-
-    --assignments
-    ass :: PropVar -> Int
-    ass prop | prop = 1
-             | otherwise = 0
+    --valuation function
+    val :: Prop -> Assignment -> Int
+    val (Const b) _ | b = 1
+                    | otherwise = 0
+    val (Var v) ass | assv = 1
+                    | otherwise = 0
+                    where assv = find v ass
