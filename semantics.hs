@@ -12,3 +12,4 @@ module Semantics where
                     | otherwise = 0
                     where assv = find v ass
     val (Not p) ass = 1 - (val p ass)
+    val (And p1 p2) ass = min (val p1 ass) (val p2 ass)
