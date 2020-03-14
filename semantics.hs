@@ -11,3 +11,4 @@ module Semantics where
     val (Var v) ass | assv = 1
                     | otherwise = 0
                     where assv = find v ass
+    val (Not p) ass = 1 - (val p ass)
