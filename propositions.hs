@@ -17,4 +17,5 @@ module Propositions where
                 | Var Char
                 | Not Prop
                 | And Prop Prop
+                | Or Prop Prop
                 | Implies Prop Prop
