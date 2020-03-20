@@ -14,3 +14,4 @@ module Semantics where
     val (Not p) ass = 1 - (val p ass)
     val (And p1 p2) ass = min (val p1 ass) (val p2 ass)
     val (Or p1 p2) ass = max (val p1 ass) (val p2 ass)
+    val (Implies p1 p2) ass = max (val (Not p1) ass) (val p2 ass)
