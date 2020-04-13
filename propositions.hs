@@ -11,7 +11,7 @@ module Propositions where
     --usage: a1 :: Assignment, a1 = [('A', False), ('B', True)]
     type Assignment = Assoc Char Bool
 
-    --datatype for a proposition
+    --datatype for a propositional formula
     --Const is equivalent to top/bottom
     data Prop = Const Bool
                 | Var Char

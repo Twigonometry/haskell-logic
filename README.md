@@ -8,3 +8,10 @@ Example usage:
 * val (And (Not (Var 'A')) (Const True)) [('A', True)] returns 0
 * val (Or (Const False) (Var 'A')) [('A', False)] returns 0
 * val (Implies (Var 'A') (Var 'B')) [('A', True), ('B', False)] returns 0
+
+## height function
+Example usage:
+```
+*Syntax> height (And (Var 'a') (Or (Var 'q') (Not (Var 'r'))))
+4
+```
